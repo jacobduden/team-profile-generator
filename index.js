@@ -2,6 +2,11 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const Choices = require('inquirer/lib/objects/choices');
 
+const Employee = require('./lib/employee');
+const Manager = require('./lib/manager');
+const Intern = require('./lib/intern');
+const Engineer = require('./lib/engineer');
+
 let workTeam = [];
 
 function managerQuestions() {
@@ -32,8 +37,9 @@ function managerQuestions() {
     const name = data.name;
     const officeNumber = data.officeNumber
     const id = data.id
-    const workTeam = new manager
-    
+    const newMember = new Manager(name, id, email, officeNumber)
+    workTeam.push(newMember)
+    options();
 
 })
 }
@@ -53,7 +59,7 @@ function options() {
             engineerQuestions();
             break;
         
-        case "intern":
+        case "Intern":
             internQuestions();
             break;
         
@@ -87,6 +93,15 @@ function engineerQuestions() {
         message: "What is the engineer's Github username?"
     },
 ])
+.then(function(data){
+    const name = data.name;
+    const id = data.id;
+    const email = data.email;
+    const gitHub = data.gitHub;
+    const newMember = new Engineer(name, id, email, gitHub);
+    workTeam.push(newMember)
+    options();
+})
 }
 
 function internQuestions() {
@@ -112,9 +127,21 @@ function internQuestions() {
         message: "What school is the intern attending?"
     },
 ])
+.then(function(data){
+    const name = data.name;
+    const id = data.id;
+    const email = data.email;
+    const school = data.school;
+    const newMember = new Intern(name, id, email, school);
+    workTeam.push(newMember)
+    options();
+})
 }
  
-inquirer
+function formTeam() {
+
+}
+managerQuestions();
 
 
 
