@@ -165,8 +165,7 @@ let htmlBottom = `
         <div class="row">
             <div class="column">
                 <div class="test-card">
-                    <h1>${workTeam[i].title}</h1>
-                    <p>Team member's Name: ${workTeam[i].name}</p>
+                    <h1>${workTeam[i].name}: ${workTeam[i].title}</h1>
                     <p>Team member's ID: ${workTeam[i].id}</p>
                     <p>Email: <a href = "mailto: ${workTeam[i].email}">${workTeam[i].email}</a></p>
                     `

@@ -1,5 +1,5 @@
 .header{
-    background-color: rgb(132, 132, 253);
+    background-color: #8484fd;
     height: 40%;
     width: 100%;
     text-align: center;
@@ -14,7 +14,7 @@
     }
 .test-card{
     background: grey;
-    padding:5px;
+    padding-bottom:5px;
     text-align: center;
 }
 .row{
@@ -26,6 +26,9 @@
     padding-top: 2%;
     padding-right: 1%;
     padding-left: 1%;
+}
+h1{
+    background-color: #8484fd;
 }
 
 
