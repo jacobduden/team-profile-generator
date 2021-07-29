@@ -4,10 +4,9 @@
    This node.js application takes user input within the terminal to generate an html page with the information provided. The "Manager" can input as many interns, or engineers as needed.
 
 ## Images
-   Demonstration GIF:
+   Demonstration video:
 
 
-   ![Using Team Profile Generator](./assets/demogif.gif)
 
    Generated HTML page:
 
